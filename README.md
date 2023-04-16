@@ -28,3 +28,13 @@ pip install -r requirements.txt
 ```
 
 _to update dependencies run `pip freeze > requirements.txt`_
+
+### Start server
+
+1. run `server.py`
+
+```shell
+flask --app server --debug run
+```
+
+_use `--debug` flag during development to auto-reload server on save_
