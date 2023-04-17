@@ -1,5 +1,6 @@
 import flask
 from flask import Flask
+from flask_cors import CORS
 import tensorflow as tf
 import numpy as np
 
@@ -14,6 +15,7 @@ def solve_predictions(predictions):
 
 # 1. create application instance
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # 2. assign handler functions to specific routes
 
