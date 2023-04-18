@@ -53,7 +53,7 @@ flask --app server --debug run
 netstat -vn | grep -E "options|5000"
 ```
 
-3. kill process with process id (ex 541)
+3. kill process with process id _(i.e. 541)_
 
 ```shell
 sudo kill 541
