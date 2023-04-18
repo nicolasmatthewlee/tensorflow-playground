@@ -38,3 +38,29 @@ flask --app server --debug run
 ```
 
 _use `--debug` flag during development to auto-reload server on save_
+
+### Resolve server not updating
+
+1. run flask app _(port 500 by default)_
+
+```shell
+flask --app server --debug run
+```
+
+2. find process ID
+
+```shell
+netstat -vn | grep -E "options|5000"
+```
+
+3. kill process with process id (ex 541)
+
+```shell
+sudo kill 541
+```
+
+4. confirm process killed
+
+```shell
+netstat -vn | grep -E "options|5000"
+```
